@@ -1,4 +1,4 @@
-HOSTNAME = "https://uat2.englishtown.com"
+HOSTNAME = "https://qa.englishtown.com"
 
 
 class StatusCode:

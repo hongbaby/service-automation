@@ -29,17 +29,11 @@ def convert_bytes_to_string(str):
 
 
 def generate_token(consume_key='abcd12341234'):
-    secret_key = "oboe_secret_1234567890-=!@#$%^&*()_+";
+    secret_key = "oboe_secret_1234567890-=!@#$%^&*()_+"
     timestamp = str(time.time()).split('.')[0]
     nonce = str(random.randint(100000, 999999))
 
     dict_data = {'ConsumerKey': consume_key, 'Timestamp': timestamp, 'Nonce': nonce}
     security_data = dict_to_string(dict_data)
 
-    token = convert_bytes_to_string(hmac.new(secret_key, security_data, hashlib.sha1).hexdigest())
-
-    # print token
-
-
-
-generate_token()
+    return convert_bytes_to_string(hmac.new(secret_key, security_data, hashlib.sha1).hexdigest())

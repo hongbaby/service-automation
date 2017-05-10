@@ -4,14 +4,15 @@ from services.enum import *
 from services.utility import *
 
 
-def load_student_booking_info():
+def load_student_booking_info(student_id, begin_date, end_date):
     url = HOSTNAME + BookingServicesURLs.LoadStudentBookingInfo
     body_data = {
-        "Member_id": 11270970,
-        "BeginUtcDate": "2017-04-08 08:38:02",
-        "EndUtcDate": "2017-04-30 08:38:02"
+        "Member_id": student_id,
+        "BeginUtcDate": begin_date,
+        "EndUtcDate": end_date
     }
     response = requests.post(url=url, json=body_data, headers=headers, verify=False)
-    print(response.content)
+    assert response.status_code == StatusCode.Success, response.text
 
-load_student_booking_info()
+    return response.text
+

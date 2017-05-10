@@ -13,10 +13,11 @@ headers = {
 
 
 class BookingServicesURLs:
-    BookingBaseURL = "/services/ecplatform/BookingService.svc/services"
+    BookingBaseURL = "/services/ecplatform/BookingService.svc/rest"
     LoadStudentBookingInfo = BookingBaseURL + '/LoadStudentBookingInfo'
     LoadScheduledClassBookingInfoList = BookingBaseURL + '/LoadScheduledClassBookingInfoList'
     ProcessClassBooking = BookingBaseURL + "/ProcessClassBooking"
+    LoadClassBookingDetailInfo = BookingBaseURL + "/LoadClassBookingDetailInfo"
 
 
 class SFServicesURLs:

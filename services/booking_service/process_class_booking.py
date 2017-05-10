@@ -4,16 +4,16 @@ from services.enum import *
 from services.utility import *
 
 
-def load_student_booking_info():
+def load_student_booking_info(student_id, scheduled_class_id):
     url = HOSTNAME + BookingServicesURLs.ProcessClassBooking
     body_data = {
-        "Member_id": 11270970,
-        "SelectedUtcDate": "2017-04-07 16:00:00",
-        "School_id": 36,
-        'ScheduledClass_id': 3030692,
-        'BookingStatus': 12
+        "Member_id": student_id,
+        "SelectedUtcDate": "2017-05-9 16:00:00",
+        "School_id": 39,
+        'ScheduledClass_id': scheduled_class_id,
+        'BookingStatus': 11
     }
     response = requests.post(url=url, json=body_data, headers=headers, verify=False)
     print(response.content)
 
-load_student_booking_info()
+load_student_booking_info(11282834, 3031309)

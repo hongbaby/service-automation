@@ -6,6 +6,11 @@ class StatusCode:
     Success = 200
 
 
+class JSONReSponse:
+    Success = True
+    Failed = False
+
+
 def get_further_date(day=0):
     """
     this function default return today's date, format like '2017-05-03'

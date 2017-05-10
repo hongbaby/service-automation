@@ -17,6 +17,7 @@ class BookingServicesURLs:
     LoadStudentBookingInfo = BookingBaseURL + '/LoadStudentBookingInfo'
     LoadScheduledClassBookingInfoList = BookingBaseURL + '/LoadScheduledClassBookingInfoList'
     ProcessClassBooking = BookingBaseURL + "/ProcessClassBooking"
+    LoadClassBookingDetailInfo = BookingBaseURL + "/LoadClassBookingDetailInfo"
 
 
 class SFServicesURLs:

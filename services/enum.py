@@ -24,3 +24,6 @@ class SFServicesURLs:
     SFBaseServiceURL = "/services/Oboe2/1.0/SalesForceService.svc"
     SFNewOrgServiceBaseURL = "/services/Oboe2/1.0/SalesforceNewOrgService.svc"
 
+
+class BookingServiceResponse:
+    ScheduledClassBookingDetailInfo = "ScheduledClassBookingDetailInfo"

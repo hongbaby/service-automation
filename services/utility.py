@@ -6,9 +6,15 @@ class StatusCode:
     Success = 200
 
 
-class JSONReSponse:
+class ResponseStatus:
     Success = True
     Failed = False
+
+
+class JsonResponse:
+    Success = "Success"
+    ErrorCode = "ErrorCode"
+    ErrorMessage = "ErrorMessage"
 
 
 def get_further_date(day=0):

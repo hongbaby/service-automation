@@ -1,4 +1,5 @@
 import datetime
+import json
 HOSTNAME = "https://qa.englishtown.com"
 
 
@@ -12,9 +13,11 @@ class ResponseStatus:
 
 
 class JsonResponse:
+    IsSuccess = "IsSuccess"
     Success = "Success"
     ErrorCode = "ErrorCode"
     ErrorMessage = "ErrorMessage"
+    ErrorMsg = "ErrorMsg"
 
 
 def get_further_date(day=0):
@@ -26,3 +29,7 @@ def get_further_date(day=0):
     now = datetime.datetime.now()
     further = now + datetime.timedelta(days=day)
     return further.strftime('%Y-%m-%d')
+
+
+def string_to_json(data):
+    return json.loads(data)
